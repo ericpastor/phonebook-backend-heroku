@@ -6,22 +6,27 @@
   "scripts": {
     "dev": "nodemon index.js",
     "start": "node index.js",
+    "lint": "eslint .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:ui": "rm -rf build && cd ../eric/part2/the-phonebook && npm run build --prod && cp -r build ../../../eric/phonebook-backend/",
     "deploy": "git push heroku main",
-    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && npm run deploy",    
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && npm run deploy",
     "logs:prod": "heroku logs --tail"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "eslint": "^8.24.0",
     "nodemon": "2.0.20"
   },
   "dependencies": {
     "cors": "2.8.5",
+    "dotenv": "^16.0.2",
     "express": "4.18.1",
     "heroku": "^7.63.4",
+    "mongoose": "^6.6.1",
+    "mongoose-unique-validator": "^3.1.0",
     "morgan": "1.10.0"
   }
 }
