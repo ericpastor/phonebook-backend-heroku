@@ -1,32 +1,39 @@
 {
-  "name": "phonebook-backend",
+  "name": "the-phonebook",
   "version": "1.0.0",
-  "description": "",
+  "description": "FSO Part3",
   "main": "index.js",
+ 
   "scripts": {
-    "dev": "nodemon index.js",
+    
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "server": "json-server -p3001 --watch db.json",
     "start": "node index.js",
-    "lint": "eslint .",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build:ui": "rm -rf build && cd ../eric/part2/the-phonebook && npm run build --prod && cp -r build ../../../eric/phonebook-backend/",
+    "dev": "nodemon index.js", 
+    "build:ui": "rm -rf build && cd ../../eric/part2/the-phonebook && npm run build --prod && cp -r build ../../../eric/phonebook-backend/",
     "deploy": "git push heroku main",
-    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && npm run deploy",
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && npm run deploy",    
     "logs:prod": "heroku logs --tail"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "eslint": "^8.24.0",
-    "nodemon": "2.0.20"
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
+  "author": "Eric",
+  "license": "ISC",
   "dependencies": {
-    "cors": "2.8.5",
-    "dotenv": "^16.0.2",
-    "express": "4.18.1",
-    "heroku": "^7.63.4",
-    "mongoose": "^6.6.1",
-    "mongoose-unique-validator": "^3.1.0",
-    "morgan": "1.10.0"
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.27",
+    "mongoose-unique-validator": "^2.0.3",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.6.0",
+    "nodemon": "^2.0.4"
   }
 }
