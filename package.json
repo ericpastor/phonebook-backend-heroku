@@ -3,17 +3,15 @@
   "version": "1.0.0",
   "description": "FSO Part3",
   "main": "index.js",
- 
   "scripts": {
-    
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "server": "json-server -p3001 --watch db.json",
     "start": "node index.js",
-    "dev": "nodemon index.js", 
+    "dev": "nodemon index.js",
     "build:ui": "rm -rf build && cd ../../eric/part2/the-phonebook && npm run build --prod && cp -r build ../../../eric/phonebook-backend/",
     "deploy": "git push heroku main",
-    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && npm run deploy",    
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && npm run deploy",
     "logs:prod": "heroku logs --tail"
   },
   "eslintConfig": {
