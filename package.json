@@ -1,8 +1,9 @@
 {
   "name": "the-phonebook",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "FSO Part3",
   "main": "index.js",
+  
   "scripts": {
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -12,8 +13,7 @@
     "build:ui": "rm -rf build && cd ../../eric/part2/the-phonebook && npm run build --prod && cp -r build ../../../eric/phonebook-backend/",
     "deploy": "git push heroku main",
     "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && npm run deploy",
-    "logs:prod": "heroku logs --tail",
-    "postinstall": "ng build"
+    "logs:prod": "heroku logs --tail"
   },
   "eslintConfig": {
     "extends": [
